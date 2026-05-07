@@ -1,17 +1,17 @@
-# Food Desert Severity Model — Methodology
+# SAFE - Spatial Accessibility to Food Explorer - Methodology
 
 ## Project Overview
 
-This project models food access severity across **St. Louis City and St. Louis County** using a combination of demographic vulnerability, grocery store accessibility, road network travel time, and sensitivity analysis.
+SAFE models food access severity across **St. Louis City and St. Louis County** using a combination of demographic vulnerability, grocery store accessibility, road network travel time, and sensitivity analysis.
 
 The goal is not only to identify areas with limited grocery access, but to estimate where limited access overlaps with socioeconomic vulnerability.
 
 The methodology is organized into four phases:
 
-1. **Phase 1 — Data Preparation**
-2. **Phase 2 — Network Accessibility Analysis**
-3. **Phase 3 — Food Desert Severity Modeling**
-4. **Phase 4 — Web GIS Preparation**
+1. **Phase 1 - Data Preparation**
+2. **Phase 2 - Network Accessibility Analysis**
+3. **Phase 3 - Food Desert Severity Modeling**
+4. **Phase 4 - Web GIS Preparation**
 
 ---
 
@@ -25,7 +25,7 @@ Because the pipeline uses public census boundaries, ACS demographic variables, O
 
 ## Coordinate Reference System Strategy
 
-The project uses `EPSG:4326` as the standard coordinate reference system for stored GeoJSON outputs and web mapping compatibility.
+SAFE uses `EPSG:4326` as the standard coordinate reference system for stored GeoJSON outputs and web mapping compatibility.
 
 Because `EPSG:4326` is a geographic coordinate system, it is not used for all analytical calculations. When accurate geometry measurements are required, layers are temporarily reprojected into projected coordinate systems. For example, projected CRS transformations are used for centroid creation, area calculation, population allocation, and density checks.
 
@@ -33,7 +33,7 @@ After these analytical steps are completed, layers are converted back to `EPSG:4
 
 ---
 
-# Phase 1 — Data Preparation
+# Phase 1 - Data Preparation
 
 ## Purpose
 
@@ -102,7 +102,7 @@ A road network was downloaded from OpenStreetMap using OSMnx. This network provi
 
 ---
 
-# Phase 2 — Network Accessibility Analysis
+# Phase 2 - Network Accessibility Analysis
 
 ## Purpose
 
@@ -139,7 +139,7 @@ This produced:
 
 ## Accessibility Score
 
-Travel times were converted into a 1–5 accessibility score:
+Travel times were converted into a 1-5 accessibility score:
 
 - **5** = strong walk access
 - **4** = moderate walk access
@@ -164,7 +164,7 @@ These layers were used for visual interpretation and web map context.
 
 ---
 
-# Phase 3 — Food Desert Severity Modeling
+# Phase 3 - Food Desert Severity Modeling
 
 ## Purpose
 
@@ -262,7 +262,7 @@ This helped identify possible issues before preparing the data for the web map.
 
 ---
 
-# Phase 4 — Web GIS Preparation
+# Phase 4 - Web GIS Preparation
 
 ## Purpose
 
@@ -347,7 +347,7 @@ This model depends on several important assumptions:
 
 # Limitations
 
-This project has several limitations:
+SAFE has limitations:
 
 - Grocery store data may be incomplete or outdated.
 - Store type does not fully represent food quality, price, or availability.

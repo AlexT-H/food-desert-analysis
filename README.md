@@ -1,16 +1,16 @@
-# St. Louis Food Desert Severity Web GIS
+# SAFE - Spatial Accessibility to Food Explorer
 
 ## Project Overview
 
-This project is a full GIS analysis and web mapping application that identifies food access severity across **St. Louis City and St. Louis County**.
+SAFE is a full GIS analysis and web mapping application that identifies food access severity across **St. Louis City and St. Louis County**.
 
 The project combines census demographics, grocery store locations, road network data, network-based travel time analysis, and weighted severity modeling to highlight areas where residents may face the greatest barriers to healthy food access.
 
 The final output is an interactive **React + Leaflet web GIS application** that allows users to explore food desert severity, compare model assumptions, inspect block group-level metrics, and toggle contextual GIS layers.
 
-Rather than functioning as a one-off local map, this project serves as a reusable GIS framework for building food access severity models in other study areas using public Census and OpenStreetMap data.
+Rather than functioning as a one-off local map, SAFE serves as a reusable GIS framework for building food access severity models in other study areas using public Census and OpenStreetMap data.
 
-**Live Deployment Link: https://food-desert-analysis-gis-web-app.vercel.app**
+**Live Deployment Link: https://spatial-accessibility-to-food-explorer.vercel.app/**
 
 ---
 
@@ -90,7 +90,7 @@ Key input categories include:
 
 ## Scalability and Reusability
 
-Although this project was implemented for St. Louis City and St. Louis County, the pipeline was designed to be reusable for other study areas.
+AlthoughSAFE was implemented for St. Louis City and St. Louis County, the pipeline was designed to be reusable for other study areas.
 
 Most of the workflow can be adapted to a new region by changing the study area boundary, county/place identifiers, and data download parameters. The same process can then be used to collect census data, download OpenStreetMap grocery stores, build road networks, calculate accessibility, generate severity scores, and prepare web-ready GeoJSON outputs.
 
@@ -100,7 +100,7 @@ This makes the project more than a single local case study. It serves as a reusa
 
 ## Project Phases
 
-## Phase 1 — Data Collection and Preparation
+## Phase 1 - Data Collection and Preparation
 
 Phase 1 created the base datasets needed for analysis.
 
@@ -126,7 +126,7 @@ This phase included:
 
 ---
 
-## Phase 2 — Network Accessibility Analysis
+## Phase 2 - Network Accessibility Analysis
 
 Phase 2 measured realistic access to grocery stores using network travel time.
 
@@ -146,7 +146,7 @@ This phase produced:
 
 ---
 
-## Phase 3 — Food Desert Severity Modeling
+## Phase 3 - Food Desert Severity Modeling
 
 Phase 3 combined accessibility results with demographic vulnerability indicators to create the food desert severity model.
 
@@ -175,7 +175,7 @@ Sensitivity analysis was used to compare model outputs and identify stable high-
 
 ---
 
-## Phase 4 — Web GIS Frontend and Deployment Preparation
+## Phase 4 - Web GIS Frontend and Deployment Preparation
 
 Phase 4 converted the completed GIS analysis into an interactive web application.
 
@@ -354,7 +354,7 @@ Suitable platforms include:
 
 ## Methodology Summary
 
-The project uses network-based travel time instead of straight-line distance because travel time better represents real-world food access.
+SAFE uses network-based travel time instead of straight-line distance because travel time better represents real-world food access.
 
 Demographic vulnerability was measured using normalized poverty and no-vehicle household indicators. These were combined with accessibility severity to create a composite food desert severity score.
 
@@ -366,7 +366,7 @@ Sensitivity analysis identifies areas that are consistently high severity across
 
 ## Limitations
 
-This project is a relative food access severity model and should not be interpreted as an official food desert designation.
+SAFE is a relative food access severity model and should not be interpreted as an official food desert designation.
 
 Important limitations include:
 

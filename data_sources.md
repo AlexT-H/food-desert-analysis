@@ -2,7 +2,7 @@
 
 ## Project
 
-**St. Louis Food Desert Severity Web GIS**
+**SAFE - Spatial Accessibility to Food Explorer**
 
 This document summarizes the main datasets used to build the food desert severity model and web GIS application.
 
@@ -228,7 +228,7 @@ These files are used by the React/Leaflet web map.
 
 # Coordinate Reference System Notes
 
-The project uses `EPSG:4326` as the standard CRS for stored GeoJSON outputs and web mapping.
+SAFE uses `EPSG:4326` as the standard CRS for stored GeoJSON outputs and web mapping.
 
 When accurate spatial measurements are needed, layers are temporarily reprojected into projected coordinate systems. This is used for operations such as centroid creation, area calculation, population allocation, and density checks.
 
@@ -238,7 +238,7 @@ After those analytical steps, outputs are returned to `EPSG:4326` for consistenc
 
 # Data Quality and Limitations
 
-This project is a portfolio-level food access severity model, not an official food desert designation.
+SAFE is a portfolio-level food access severity model, not an official food desert designation.
 
 Main limitations:
 
@@ -265,4 +265,4 @@ This project uses or derives data from:
 
 # Summary
 
-The project combines public boundary, demographic, grocery store, and road network data into a reproducible GIS workflow. These datasets support the final accessibility model, food desert severity model, sensitivity analysis, and interactive web GIS application.
+SAFE combines public boundary, demographic, grocery store, and road network data into a reproducible GIS workflow. These datasets support the final accessibility model, food desert severity model, sensitivity analysis, and interactive web GIS application.

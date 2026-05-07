@@ -1,15 +1,15 @@
-# Food Desert Severity Model — Workflow
+# SAFE - Spatial Accessibility to Food Explorer
 
 ## Project Overview
 
-This project builds a reproducible GIS pipeline for identifying food access severity across St. Louis City and St. Louis County. The workflow moves from raw census, grocery store, and road network data into a modeled food desert severity layer and a deployment-ready web GIS application.
+SAFE builds a reproducible GIS pipeline for identifying food access severity across St. Louis City and St. Louis County. The workflow moves from raw census, grocery store, and road network data into a modeled food desert severity layer and a deployment-ready web GIS application.
 
 The project is organized into four phases:
 
-1. **Phase 1 — Data Collection and Preparation**
-2. **Phase 2 — Network Accessibility Analysis**
-3. **Phase 3 — Food Desert Severity Modeling**
-4. **Phase 4 — Web GIS Preparation and Deployment**
+1. **Phase 1 - Data Collection and Preparation**
+2. **Phase 2 - Network Accessibility Analysis**
+3. **Phase 3 - Food Desert Severity Modeling**
+4. **Phase 4 - Web GIS Preparation and Deployment**
 
 ---
 
@@ -41,7 +41,7 @@ After those changes, the same phase structure can be reused:
 
 ## Coordinate Reference System Workflow
 
-The project uses `EPSG:4326` as the standard CRS for GeoJSON storage, project consistency, and web mapping.
+SAFE uses `EPSG:4326` as the standard CRS for GeoJSON storage, project consistency, and web mapping.
 
 Throughout the pipeline, layers are reprojected when specific operations require a projected CRS. For example:
 
@@ -54,7 +54,7 @@ This approach keeps the project compatible with Leaflet while still allowing mor
 
 ---
 
-# Phase 1 — Data Collection and Preparation
+# Phase 1 - Data Collection and Preparation
 
 ## Purpose
 
@@ -145,7 +145,7 @@ It exports the project boundary, census tracts, and block groups as processed Ge
 
 ---
 
-# Phase 2 — Network Accessibility Analysis
+# Phase 2 - Network Accessibility Analysis
 
 ## Purpose
 
@@ -206,7 +206,7 @@ The script also generates:
 
 ---
 
-# Phase 3 — Food Desert Severity Modeling
+# Phase 3 - Food Desert Severity Modeling
 
 ## Purpose
 
@@ -301,7 +301,7 @@ This serves as a final quality-control check before web preparation.
 
 ---
 
-# Phase 4 — Web GIS Preparation and Deployment
+# Phase 4 - Web GIS Preparation and Deployment
 
 ## Purpose
 

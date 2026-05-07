@@ -467,8 +467,9 @@ export default function App() {
   return (
     <div style={styles.app}>
       <aside style={styles.sidebar}>
-        <h1 style={styles.title}>Food Access Severity</h1>
-        <p style={styles.subtitle}>Interactive model explorer for food access severity in the St. Louis, MO region.</p>
+        <h1 style={styles.title}> S A F E </h1>
+        <h3 style={styles.subtitle}>The Spatial Accessibility to Food Explorer</h3>
+        <p style={styles.subtitle}>Interactive food access severity model for the St. Louis, Missouri region.</p>
 
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>Map Field</h2>
