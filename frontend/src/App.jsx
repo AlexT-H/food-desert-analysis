@@ -61,6 +61,13 @@ const STABILITY_COLORS = {
 };
 
 const MODEL_OPTIONS = {
+  baseMapOnly: {
+    label: "Base Map Only",
+    field: null,
+    type: "transparent",
+    dataSource: "severity",
+    description: "View the underlying basemap without the main block group overlay.",
+  },
   baseSeverity: {
     label: "Food Desert Severity",
     field: "food_desert_severity",
@@ -149,6 +156,18 @@ function getFeatureColor(feature, activeModel) {
 
 function mainLayerStyle(activeModel) {
   return function (feature) {
+    const model = MODEL_OPTIONS[activeModel];
+
+    if (model?.type === "transparent") {
+      return {
+        fillColor: "transparent",
+        color: "transparent",
+        weight: 0,
+        opacity: 0,
+        fillOpacity: 0,
+      };
+    }
+
     const isStability = activeModel === "stability";
 
     return {
@@ -332,6 +351,18 @@ async function fetchGeoJson(path, required = false) {
 
 function Legend({ activeModel }) {
   const model = MODEL_OPTIONS[activeModel];
+
+  if (model.type === "transparent") {
+  return (
+    <div style={styles.legend}>
+      <h3 style={styles.legendTitle}>{model.label}</h3>
+      <div style={styles.legendRow}>
+        <span style={{ ...styles.swatch, backgroundColor: "#ffffff" }} />
+        <span>Main analytical overlay hidden</span>
+      </div>
+    </div>
+  );
+  }
 
   const rows = model.type === "range"
     ? model.ranges.map((range) => ({ label: range.label, color: range.color }))
