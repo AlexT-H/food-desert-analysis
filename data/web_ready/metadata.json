@@ -1,0 +1,86 @@
+{
+  "description": "Web-ready GeoJSON outputs for the St. Louis food access severity application.",
+  "crs": "EPSG:4326",
+  "simplification_tolerance": 0.001,
+  "numeric_precision_decimals": 3,
+  "area_units": {
+    "bg_area": "square miles",
+    "bg_area_sq_mi": "square miles",
+    "conversion_note": "Original bg_area assumed to be square meters and converted using 2,589,988.110336 square meters per square mile."
+  },
+  "layers": {
+    "severity_model": {
+      "status": "processed",
+      "feature_count": 4323,
+      "fields": [
+        "severity_classification",
+        "access_severity",
+        "food_desert_severity",
+        "severity_access_heavy",
+        "severity_demo_heavy",
+        "access_score",
+        "allocated_population",
+        "total_population",
+        "norm_poverty",
+        "norm_no_vehicle",
+        "bg_area",
+        "walk_time_min",
+        "drive_time_min",
+        "stability_class",
+        "geometry",
+        "block_group_number",
+        "bg_area_sq_mi"
+      ]
+    },
+    "stability": {
+      "status": "processed",
+      "feature_count": 4323,
+      "fields": [
+        "stability_class",
+        "high_base",
+        "high_access",
+        "high_demo",
+        "geometry"
+      ]
+    },
+    "tracts": {
+      "status": "processed",
+      "feature_count": 340,
+      "fields": [
+        "geometry"
+      ]
+    },
+    "stores": {
+      "status": "processed",
+      "feature_count": 420,
+      "fields": [
+        "name",
+        "shop",
+        "geometry"
+      ]
+    },
+    "walk_iso": {
+      "status": "processed",
+      "feature_count": 420,
+      "fields": [
+        "geometry"
+      ]
+    },
+    "drive_iso": {
+      "status": "processed",
+      "feature_count": 416,
+      "fields": [
+        "geometry"
+      ]
+    },
+    "edges": {
+      "status": "processed",
+      "feature_count": 145722,
+      "fields": [
+        "highway",
+        "length",
+        "geometry"
+      ]
+    }
+  }
+}
