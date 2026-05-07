@@ -10,6 +10,8 @@ The final output is an interactive **React + Leaflet web GIS application** that 
 
 Rather than functioning as a one-off local map, this project serves as a reusable GIS framework for building food access severity models in other study areas using public Census and OpenStreetMap data.
 
+**Live Deployment Link: https://food-desert-analysis-gis-web-app.vercel.app**
+
 ---
 
 ## Project Goals
